@@ -1,0 +1,6 @@
+build/
+ifsClient
+ifsServer
+.DS_Store/
+.vscode/
+vdisk
