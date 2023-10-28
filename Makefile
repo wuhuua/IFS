@@ -33,6 +33,8 @@ CLI=ifsClient
 
 all: $(TARGET) $(CLI)
 
+client: $(CLI)
+
 $(TARGET): $(LOC_CLIENT_OBJ) $(IFS_OBJ) $(MAIN_OBJ) $(NET_OBJ) $(PARSE_OBJ) $(STARTPAGE_OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
 
