@@ -1351,9 +1351,10 @@ int quietRead(ext2_inode *current, char *name,char* output){
                     fread(&content_char, sizeof(char), 1, fp);
                     if (content_char == 0xD)
                         strcat(output,"\n");
-                    else
+                    else{
                         str[0]=content_char;
                         strcat(output, str);
+                    }
                 }
                 strcat(output,"\n");
                 time(&now);

@@ -22,7 +22,7 @@ void parse(const char* message,ext2_inode* currentdir,char* response){
     char command[10], var1[10], var2[128], path[10];
     ext2_inode temp;
     int i, j;
-    char tempStr[50];
+    char tempStr[200];
     (void)sscanf(message,"%s %s %s",command,var1,var2);
     int lenVar1=strlen(var1);
     int lenVar2=strlen(var2);
