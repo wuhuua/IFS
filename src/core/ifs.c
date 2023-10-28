@@ -1250,7 +1250,6 @@ int quietConnect(userInfo *user,char* output){
         case ACCEPTINIT:{
             f = fopen(PATH, "r+");
             if(f==NULL){
-                fclose(f);
                 if (format() != 0) {
                     return -1;
                 }
