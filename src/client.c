@@ -232,8 +232,8 @@ void CliInput(const ConnectInfo* info){
 }
 
 int main(int argc, char *argv[]) {
-    char ip[10];
-    memset(ip,0,10);
+    char ip[20];
+    memset(ip,0,20);
     int opt,
     port=-1,
     need_help=0,
@@ -274,11 +274,12 @@ int main(int argc, char *argv[]) {
     int clientSocket=connectIFS(ip,port);
     if(clientSocket==-1){
         printf("connect failed\n");
+    }else{
+        printStartPage();
     }
     ConnectInfo info;
     info.bufferSize=buffer_size;
     info.clientSocket=clientSocket;
-    printStartPage();
     if(CliInit(&info)==0){
         CliInput(&info);
     }
